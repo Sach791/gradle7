@@ -7,15 +7,12 @@ trigger:
 - master
 
 pool:
-  name:Default
+  name: Default
 
 steps:
-- script: echo Hello, world!
+- script: echo My Gradle Application
   displayName: 'Run a one-line script'
 - script: gradle build
+  displayName: 'Building the gradle application'
 - script: gradle run
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  displayName: 'Running gradle application'
